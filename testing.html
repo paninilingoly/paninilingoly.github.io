@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olympiad Problem</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .problem-section img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .hint-section {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .hint-button {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        .hint-button:hover {
+            background-color: #0056b3;
+        }
+        .feedback {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+        }
+        .feedback p {
+            margin: 0;
+            font-size: 16px;
+        }
+        .feedback select {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Problem Section -->
+    <div class="problem-section">
+        <img src="problem-image.png" alt="Olympiad Problem">
+    </div>
+    
+    <!-- Hint Section -->
+    <div class="hint-section">
+        <button class="hint-button" onclick="showHint()">Click here to view a hint!</button>
+    </div>
+    
+    <!-- Feedback Section
+    <div class="feedback">
+        <p>Did you enjoy the problem?</p>
+        <select>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+            <option value="not_sure">Not Sure</option>
+        </select>
+    </div> -->
+</div>
+
+<script>
+    function showHint() {
+        alert("Hint: Pay attention to the number of petals and their arrangement!");
+    }
+</script>
+
+</body>
+</html>

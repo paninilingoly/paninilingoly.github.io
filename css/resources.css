@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+
+:root {
+    --main: #5595d1;
+    --box_shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+* {
+    font-family: 'Roboto', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    transition: 0.2s all linear;
+}
+
+*::selection {
+    background: var(--main);
+    color: #fff;
+}
+
+html::-webkit-scrollbar {
+    width: 5px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--main);
+}
+
+html::-webkit-scrollbar-track {
+    background: #000;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited {
+    background-color: var(--main) !important;
+    padding: 0.8rem 1.6rem;
+    font-size: 1.8rem;
+    border-radius: 10px;
+    border: none;
+}
+
+.btn-close {
+    font-size: 1.8rem;
+}
+
+.modal-content {
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.list-group .list-group-item {
+    font-size: 1.8rem;
+    line-height: 2;
+}
+
+.highlighted-text {
+    color: var(--main);
+}
+
+.heading {
+    font-size: 4rem;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.heading span {
+    color: var(--main);
+    text-transform: capitalize;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Navbar - Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 9%;
+}
+
+.header .head-navbar a {
+    color: #fff;
+    font-size: 1.8rem;
+    margin-left: 2rem;
+}
+
+.header .head-navbar a:hover {
+    color: var(--main);
+}
+
+.logo img {
+    height: 5rem;
+}
+
+#menuBars {
+    color: #fff;
+    cursor: pointer;
+    font-size: 3rem;
+    display: none;
+}
+
+/* Navbar header */
+
+/* About */
+.about {
+    margin-top: 10em;
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.about .row .content {
+    flex: 1 1 45rem;
+}
+
+.about .content p {
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    line-height: 1;
+}
+
+/* About */
+
+/* Resources */
+
+.resources .container .row .table tbody tr a {
+    color: #000;
+}
+
+table.dataTable,
+table.dataTable th,
+table.dataTable td {
+    background-color: transparent;
+    font-size: 1.8rem;
+}
+
+.resources .container .row .table tbody tr.level-2 {
+    background-color: #ecffb2;
+}
+
+.level-color.level-color-00 {
+    background-color: #b2ffb2;
+}
+
+.level-color.level-color-02 {
+    background-color: #ecffb2;
+}
+
+.level-color.level-color-04 {
+    background-color: #fcffb2;
+}
+
+.level-color.level-color-06 {
+    background-color: #ffecb2;
+}
+
+.level-color.level-color-08 {
+    background-color: #ffd2b2;
+}
+
+.level-color.level-color-10 {
+    background-color: #ffb2b2;
+}
+
+#resources_table_filter label input.form-control {
+    padding: 5px 10px;
+    font-size: 1.8rem;
+}
+
+#resources_table_length label select.form-select {
+    padding: 5px 15px;
+    font-size: 1.8rem;
+}
+
+/* Resources */
+
+/* Others */
+.others {
+    margin-top: 4rem;
+}
+
+.others #accordionFlushExample .accordion-body p a {
+    color: #000;
+}
+
+.others #accordionFlushExample .accordion-body ul li {
+    line-height: 2;
+}
+
+.others #accordionFlushExample .accordion-body ul li a {
+    /* text-decoration: none; */
+    color: #000;
+}
+
+/* Others */
+
+/* Table */
+.container {
+    font-size: 1.8rem;
+}
+
+.input-group .input-group-text {
+    font-size: 2rem;
+    border-radius: 10px;
+}
+
+.input-group input {
+    height: 4rem;
+    font-size: 2rem;
+}
+
+.form-control {
+    font-size: 1.8rem;
+    border-radius: 10px;
+}
+
+.accordion .accordion-button {
+    font-size: 1.8rem;
+    border-radius: 10px;
+}
+
+#resources_table_wrapper .row .dataTables_paginate ul li a {
+    font-size: 1.5rem;
+}
+
+/* Table */
+
+
+/* Media Query */
+@media (max-width: 991px) {
+    html {
+        font-size: 35%;
+    }
+
+    .header {
+        padding: 1.5rem 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #menuBars {
+        display: initial;
+    }
+
+    .header .head-navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        border-top: 0.2rem solid #222;
+        background: #000;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .head-navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .head-navbar a {
+        display: flex;
+        background: #333;
+        font-size: 2rem;
+        margin: 1.3rem;
+        padding: 1.3rem;
+        border-radius: 0.5rem;
+    }
+
+    .fa-times {
+        transform: rotate(90deg);
+    }
+
+    .about .row {
+        margin-bottom: 3.5rem;
+    }
+
+    .about .row .content h3 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}

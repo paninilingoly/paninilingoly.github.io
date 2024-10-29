@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+
+:root {
+    --main: #5595d1;
+    --box_shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    --rank-gold: #ffd700;
+    --rank-silver: #adacac;
+    --rank-bronze: #e7ab6f;
+    --rank-sky: #e7f5fe;
+}
+
+* {
+    font-family: 'Roboto', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    transition: 0.2s all linear;
+}
+
+*::selection {
+    background: var(--main);
+    color: #fff;
+}
+
+.highlighted-text::selection {
+    background-color: var(--main);
+    text-shadow: 0 0 1px #fff;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+/* html::-webkit-scrollbar-thumb {
+    background: rgb(85, 149, 209) !important;
+    background: linear-gradient(337deg, rgba(85, 149, 209, 1) 0%, rgba(139, 198, 252, 1) 50%, rgba(85, 149, 209, 1) 99%) !important;
+}
+
+html::-webkit-scrollbar-track {
+    background: #000;
+} */
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited {
+    background: rgb(85, 149, 209) !important;
+    background: linear-gradient(337deg, rgba(85, 149, 209, 1) 0%, rgba(139, 198, 252, 1) 50%, rgba(85, 149, 209, 1) 99%) !important;
+    padding: 0.8rem 1.6rem;
+    font-size: 1.8rem;
+    border-radius: 10px;
+    border: none;
+}
+
+.btn-close {
+    font-size: 1.8rem;
+}
+
+.modal-content {
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.list-group .list-group-item {
+    font-size: 1.8rem;
+    line-height: 2;
+}
+
+.highlighted-text {
+    background: rgb(85, 149, 209);
+    background: -webkit-linear-gradient(337deg, rgba(85, 149, 209, 1) 0%, rgba(139, 198, 252, 1) 50%, rgba(85, 149, 209, 1) 99%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.heading {
+    font-size: 4rem;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.heading span {
+    color: var(--main);
+    text-transform: capitalize;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 2rem 7%;
+    margin-bottom: 3.5rem;
+}
+
+a {
+    color: var(--main);
+}
+
+
+/* Navbar - Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 9%;
+}
+
+.header .head-navbar a {
+    color: #fff;
+    font-size: 1.8rem;
+    margin-left: 2rem;
+}
+
+.header .head-navbar a:hover {
+    color: var(--main);
+}
+
+.logo img {
+    height: 5rem;
+}
+
+#menuBars {
+    color: #fff;
+    cursor: pointer;
+    font-size: 3rem;
+    display: none;
+}
+
+/* Navbar header */
+
+
+/* Pagination Section */
+.pagination-section {
+    margin-top: 8rem;
+}
+
+.nav-link.active {
+    background: rgb(85, 149, 209) !important;
+    background: linear-gradient(337deg, rgba(85, 149, 209, 1) 0%, rgba(139, 198, 252, 1) 50%, rgba(85, 149, 209, 1) 99%) !important;
+}
+
+.pagination-section #v-pills-tab {
+    padding-right: 10rem;
+}
+
+#v-pills-tab .nav-link {
+    width: 150px;
+    font-size: 2rem;
+    color: var(--main);
+}
+
+#v-pills-tab .nav-link:focus,
+#v-pills-tab .nav-link:visited,
+#v-pills-tab .nav-link:active,
+#v-pills-tab .nav-link.active {
+    color: #fff;
+}
+
+#v-pills-tabContent .nav-link {
+    width: 150px;
+    font-size: 2rem;
+    color: var(--main);
+}
+
+#v-pills-tabContent .nav-link:focus,
+#v-pills-tabContent .nav-link:visited,
+#v-pills-tabContent .nav-link:active,
+#v-pills-tabContent .nav-link.active {
+    color: #fff;
+}
+
+#v-pills-tabContent li img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 3rem;
+}
+
+#pills-tabContent .list-group .list-group-item.active {
+    background: rgb(85, 149, 209) !important;
+    background: linear-gradient(337deg, rgba(85, 149, 209, 1) 0%, rgba(139, 198, 252, 1) 50%, rgba(85, 149, 209, 1) 99%) !important;
+    border: none;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#pills-tabContent .list-group .list-group-item .iconOnly {
+    display: none;
+    float: right;
+}
+
+.pills-camp {
+    width: 1100px;
+    font-size: 3rem;
+}
+
+.camp_names {
+    position: relative;
+    overflow: scroll;
+    height: 700px;
+}
+
+.camp_names::-webkit-scrollbar {
+    display: none;
+}
+
+.camp_names .list-group-item {
+    font-size: 1.8rem;
+}
+
+.camp_names .list-group-item.rank-gold {
+    background-color: var(--rank-gold);
+}
+
+.camp_names .list-group-item.rank-silver {
+    background-color: var(--rank-silver);
+}
+
+.camp_names .list-group-item.rank-bronze {
+    background-color: var(--rank-bronze);
+}
+
+.camp_names .list-group-item.rank-sky {
+    background-color: var(--rank-sky);
+}
+
+.tooltip-inner {
+    background: rgb(85, 149, 209) !important;
+    background: linear-gradient(337deg, rgba(85, 149, 209, 1) 0%, rgba(139, 198, 252, 1) 50%, rgba(85, 149, 209, 1) 99%) !important;
+    font-size: 1.2rem;
+}
+
+.list-group .plo-header {
+    font-size: 4rem;
+}
+
+.list-group .plo-description {
+    font-size: 1.8rem;
+    width: 50%;
+}
+
+.list-group p{
+    font-size: 1.8rem;
+}
+
+.list-group p span {
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.card {
+    border-radius: 10px;
+}
+
+.card-title {
+    font-size: 2rem;
+}
+
+.card-subtitle {
+    font-size: 1.5rem;
+}
+
+.card-text {
+    font-size: 1.4rem;
+}
+
+.card-link {
+    font-size: 1.4rem;
+}
+
+.card .card-body .card-text span,
+.card .card-body .card-subtitle span {
+    font-weight: bold;
+}
+
+#pills-tabContent .list-group .list-group-item .IndiaIconTextBadge {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#pills-tabContent .list-group .list-group-item .IconTextBadge {
+    display: flex;
+    gap: 5px;
+    float: right;
+    background-color: #5595d1;
+    padding: 2px 5px 2px 5px;
+    border-radius: 5px;
+    box-shadow: var(--box_shadow);
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+}
+
+#pills-tabContent .list-group .list-group-item .IconTextBadge.silver {
+    background-color: var(--rank-silver);
+}
+
+#pills-tabContent .list-group .list-group-item .IconTextBadge.HonorableMention {
+    color: #000;
+    background-color: var(--rank-sky);
+}
+
+#pills-tabContent .list-group .list-group-item .IconTextBadge.gold {
+    background-color: var(--rank-gold);
+}
+
+#pills-tabContent .list-group .list-group-item .IconTextBadge.bronze {
+    background-color: var(--rank-bronze);
+}
+
+#pills-tabContent .list-group .list-group-item .IconTextBadge.OneBestSolution {
+    background-color: var(--main);
+}
+
+/* Pagination Section */
+
+/* Media Query */
+@media (max-width: 991px) {
+    html {
+        font-size: 35%;
+    }
+
+    .header {
+        padding: 1.5rem 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #menuBars {
+        display: initial;
+    }
+
+    .header .head-navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        border-top: 0.2rem solid #222;
+        background: #000;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .head-navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .head-navbar a {
+        display: flex;
+        background: #333;
+        font-size: 2rem;
+        margin: 1.3rem;
+        padding: 1.3rem;
+        border-radius: 0.5rem;
+    }
+
+    .fa-times {
+        transform: rotate(90deg);
+    }
+
+    .pagination-section #v-pills-tab {
+        padding-right: 5rem;
+    }
+
+    #v-pills-tab .nav-link {
+        width: 50px;
+    }
+
+    #v-pills-tabContent .nav-link {
+        width: 80px;
+    }
+
+    .camp_names {
+        height: 550px;
+    }
+
+    .list-group .plo-description {
+        font-size: 1.5rem;
+        width: 100%;
+    }
+    .list-group .plo-header {
+        font-size: 2rem;
+    }
+
+    .pills-camp {
+        width: 250px;
+    }
+    #pills-tabContent .list-group .list-group-item .IconTextBadge {
+        display: none;
+    }
+    #pills-tabContent .list-group .list-group-item .iconOnly {
+        display: flex;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
