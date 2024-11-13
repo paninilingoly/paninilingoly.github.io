@@ -2,4 +2,4 @@
 
 Website for PLO
 
-Link: [paninilingoly.github.io](paninilingoly.github.io)
+Link: [https://paninilingoly.github.io/](https://paninilingoly.github.io/)
